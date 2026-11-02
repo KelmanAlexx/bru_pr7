@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="kBPlqaXXq-7t0J-bgIcl">
+    <mxGraphModel dx="1804" dy="1057" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QnruMbyeGe0RWcVQtacK-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1168bd;strokeWidth=2;dashed=1;verticalAlign=top;fontStyle=1;fontSize=16;fontColor=#1168bd;container=1;collapsible=0;arcSize=12;" value="АИС «Центр карьеры и трудоустройства» [Software System]" vertex="1">
+          <mxGeometry height="770" width="1015" x="756" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-2" parent="QnruMbyeGe0RWcVQtacK-1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;metaEdit=1;fillColor=#438dd5;fontColor=#ffffff;strokeColor=#3C7FC0;fontSize=14;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;Клиентское приложение&lt;/b&gt;&lt;br&gt;[Container: WPF Desktop / C# / .NET]&lt;br&gt;&lt;br&gt;Предоставляет интерфейс студенту&lt;br&gt;и специалисту центра карьеры.&lt;br&gt;Поиск вакансий, резюме и отклики." vertex="1">
+          <mxGeometry height="190" width="365" x="44" y="142.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-3" parent="QnruMbyeGe0RWcVQtacK-1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;metaEdit=1;fillColor=#438dd5;fontColor=#ffffff;strokeColor=#3C7FC0;fontSize=14;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;Интеграционный шлюз&lt;/b&gt;&lt;br&gt;[Container: ASP.NET Core Web API / C#]&lt;br&gt;&lt;br&gt;REST API, авторизация и проверка данных.&lt;br&gt;&lt;b&gt;GET /vacancies&lt;/b&gt; — список актуальных вакансий.&lt;br&gt;&lt;b&gt;POST /applications/submit&lt;/b&gt; — отправка отклика." vertex="1">
+          <mxGeometry height="205" width="420" x="564" y="137.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-4" parent="QnruMbyeGe0RWcVQtacK-1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;metaEdit=1;fillColor=#438dd5;fontColor=#ffffff;strokeColor=#3C7FC0;fontSize=14;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;Сервис синхронизации вакансий&lt;/b&gt;&lt;br&gt;[Container: .NET BackgroundService]&lt;br&gt;&lt;br&gt;Получает вакансии из систем работодателей,&lt;br&gt;приводит данные к единому формату&lt;br&gt;и обновляет каталог." vertex="1">
+          <mxGeometry height="180" width="365" x="44" y="483.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-5" parent="QnruMbyeGe0RWcVQtacK-1" style="shape=cylinder3;whiteSpace=wrap;html=1;metaEdit=1;fillColor=#438dd5;fontColor=#ffffff;strokeColor=#3C7FC0;fontSize=14;fontFamily=Arial;align=center;verticalAlign=middle;size=10;spacing=8;" value="&lt;b&gt;База данных&lt;/b&gt;&lt;br&gt;[Container: PostgreSQL]&lt;br&gt;&lt;br&gt;Пользователи и роли;&lt;br&gt;резюме студентов;&lt;br&gt;вакансии и работодатели;&lt;br&gt;отклики на вакансии." vertex="1">
+          <mxGeometry height="165" width="360" x="594" y="491" as="geometry" />
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-6" parent="1" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];fillColor=#08427b;fontColor=#ffffff;strokeColor=#073763;fontSize=12;fontFamily=Arial;" value="&lt;b&gt;Студент / выпускник&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Просматривает вакансии,&lt;br&gt;создаёт резюме и отправляет&lt;br&gt;отклики на стажировки." vertex="1">
+          <mxGeometry height="185" width="190" x="420" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-7" parent="1" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];fillColor=#08427b;fontColor=#ffffff;strokeColor=#073763;fontSize=12;fontFamily=Arial;" value="&lt;b&gt;Специалист центра&lt;br&gt;карьеры&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Работает с каталогом вакансий&lt;br&gt;и контролирует отклики студентов." vertex="1">
+          <mxGeometry height="185" width="190" x="506" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-8" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;metaEdit=1;fillColor=#999999;fontColor=#ffffff;strokeColor=#8A8A8A;fontSize=14;fontFamily=Arial;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;Платформы работодателей&lt;/b&gt;&lt;br&gt;[External System]&lt;br&gt;&lt;br&gt;Предоставляют сведения&lt;br&gt;об актуальных вакансиях&lt;br&gt;и принимают отклики студентов." vertex="1">
+          <mxGeometry height="220" width="360" x="1930" y="543.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-9" edge="1" parent="1" source="QnruMbyeGe0RWcVQtacK-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#707070;strokeWidth=1.5;fontColor=#555555;fontSize=12;fontFamily=Arial;labelBackgroundColor=#FFFFFF;" target="QnruMbyeGe0RWcVQtacK-2" value="Просматривает вакансии&lt;br&gt;и отправляет отклики">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="731" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-10" edge="1" parent="1" source="QnruMbyeGe0RWcVQtacK-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#707070;strokeWidth=1.5;fontColor=#555555;fontSize=12;fontFamily=Arial;labelBackgroundColor=#FFFFFF;" target="QnruMbyeGe0RWcVQtacK-2" value="Управляет каталогом&lt;br&gt;и заявками">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="726" y="910" />
+              <mxPoint x="726" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-11" edge="1" parent="1" source="QnruMbyeGe0RWcVQtacK-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#707070;strokeWidth=1.5;fontColor=#555555;fontSize=12;fontFamily=Arial;labelBackgroundColor=#FFFFFF;" target="QnruMbyeGe0RWcVQtacK-3" value="HTTPS / REST / JSON">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-12" edge="1" parent="1" source="QnruMbyeGe0RWcVQtacK-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#707070;strokeWidth=1.5;fontColor=#555555;fontSize=12;fontFamily=Arial;labelBackgroundColor=#FFFFFF;" target="QnruMbyeGe0RWcVQtacK-5" value="SQL: чтение и запись данных">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-13" edge="1" parent="1" source="QnruMbyeGe0RWcVQtacK-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#707070;strokeWidth=1.5;fontColor=#555555;fontSize=12;fontFamily=Arial;labelBackgroundColor=#FFFFFF;" target="QnruMbyeGe0RWcVQtacK-5" value="Обновляет каталог вакансий">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-14" edge="1" parent="1" source="QnruMbyeGe0RWcVQtacK-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#707070;strokeWidth=1.5;fontColor=#555555;fontSize=12;fontFamily=Arial;labelBackgroundColor=#FFFFFF;" target="QnruMbyeGe0RWcVQtacK-8" value="Передаёт отклики работодателю&lt;br&gt;(POST)">
+          <mxGeometry relative="1" x="-0.1023" y="19" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1811" y="555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QnruMbyeGe0RWcVQtacK-15" edge="1" parent="1" source="QnruMbyeGe0RWcVQtacK-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#707070;strokeWidth=1.5;dashed=1;dashPattern=6 4;fontColor=#555555;fontSize=12;fontFamily=Arial;labelBackgroundColor=#FFFFFF;" target="QnruMbyeGe0RWcVQtacK-4" value="Получает вакансии для синхронизации&lt;br&gt;(GET)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1996" y="1100" />
+              <mxPoint x="986" y="1100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
