@@ -1,0 +1,48 @@
+@startuml
+left to right direction
+skinparam componentStyle rectangle
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam component {
+  BackgroundColor #F7FAFC
+  BorderColor #52718A
+}
+skinparam package {
+  BorderColor #74A3C7
+}
+
+package "Клиентское приложение (WPF / C#)" {
+  component "UI.Desktop\nОкна, формы, представления" as UI
+  component "Client.Application\nСценарии и прикладные сервисы" as ClientApp
+  component "Client.Domain\nМодели и правила предметной области" as ClientDomain
+  component "Client.Infrastructure\nHTTP-клиент, токены, настройки" as ClientInfra
+  UI --> ClientApp : вызывает сценарии
+  ClientApp --> ClientDomain : использует модели
+  ClientInfra ..> ClientApp : реализует интерфейсы
+}
+
+package "Интеграционный шлюз (ASP.NET Core Web API / C#)" {
+  component "Gateway.Api\nREST-эндпоинты, middleware" as GatewayApi
+  component "Security.Auth\nJWT, роли и права доступа" as Auth
+  component "Gateway.Application\nОбработка запросов и сценарии" as GatewayApp
+  component "Gateway.Domain\nВакансии, резюме, отклики" as GatewayDomain
+  component "Gateway.Infrastructure\nРепозитории и адаптеры партнёров" as GatewayInfra
+  GatewayApi --> GatewayApp : передаёт запросы
+  GatewayApi --> Auth : проверяет токен
+  GatewayApp --> GatewayDomain : применяет правила
+  GatewayInfra ..> GatewayApp : реализует интерфейсы
+  GatewayInfra --> GatewayDomain : сохраняет сущности
+}
+
+component "CareerCenter.Contracts\nDTO и общие контракты" as Contracts
+ database "PostgreSQL\nПользователи, вакансии, резюме, отклики" as DB
+ component "Системы работодателей\nВнешние API партнёров" as Employers
+
+ClientInfra --> GatewayApi : HTTPS / JSON
+ClientInfra --> Contracts : DTO
+GatewayApi --> Contracts : принимает / возвращает DTO
+GatewayInfra --> Contracts : маппинг DTO
+GatewayInfra --> DB : SQL / EF Core
+GatewayInfra --> Employers : HTTPS / API работодателя
+@enduml
